@@ -1,0 +1,41 @@
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    overflow: hidden; /* Make sure pseudo stays within card */
+    border-radius: 8px; /* optional for nicer edge highlight */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 101, 132, 0.3);
+}
+
+/* Glisten effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.1) 100%
+    );
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.7s ease;
+    pointer-events: none; /* doesn't interfere with clicks */
+}
+
+.card:hover::before {
+    transform: translateX(100%) rotate(25deg);
+    opacity: 1;
+}
