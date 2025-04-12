@@ -1,11 +1,14 @@
-// Given the pack name, return a list of cards that can be obtained from it
 import scarletVioletCards from "./CardImports/scarlet-violet-cards/sv_cards.ts";
-import {PackNames} from "./types.ts";
-
+import { PackNames } from "./types.ts";
 
 const getCardsFromPack = (packName: PackNames | undefined) => {
     if (packName === "Scarlet and Violet") {
-        return Object.values(scarletVioletCards); // Return card objects
+        // Flatten all card categories into a single array
+        return [
+            ...Object.values(scarletVioletCards.pokemon),
+            ...Object.values(scarletVioletCards.trainer),
+            ...Object.values(scarletVioletCards.energy),
+        ];
     }
     return [];
 };

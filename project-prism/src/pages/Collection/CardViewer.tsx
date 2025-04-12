@@ -108,6 +108,7 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
             mesh.material = new THREE.MeshStandardMaterial({
                 map: backTexture,
                 envMap: baseEnvironment,
+                envMapIntensity: 0.25,
             });
 
             mesh.geometry = mesh.geometry.clone();

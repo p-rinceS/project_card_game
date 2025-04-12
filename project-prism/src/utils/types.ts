@@ -15,4 +15,7 @@ export type CardContents = {
     isEx: Boolean;
     attribute?: string | undefined;
     name: string;
+    isTrainer?: Boolean;
+    isEnergy?: Boolean;
+    isFullArt?: Boolean;
 }
