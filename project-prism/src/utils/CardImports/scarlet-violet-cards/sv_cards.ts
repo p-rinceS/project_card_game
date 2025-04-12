@@ -50,7 +50,6 @@ Skiddo.png
 Vivillon.png
 Spewpa.png
 Scatterbug.png
-
 Bruxish.png
 Quaxly.png
 Clauncher.png
@@ -65,6 +64,23 @@ Tatsugiri.png
 Wigglet.png
 Wigglet_2.png
 Wugtrio.png
+=======
+Armarouge.png
+Charcadet_2.png
+Charcadet.png
+Skeledirge.png
+Crocalor.png
+Pawmo.png
+Pawmi_2.png
+Pawmi.png
+Toxtricity.png
+Toxel.png
+Rotom_2.png
+Miraidon.png
+Kilowattrel.png
+Wattrel_2.png
+Wattrel.png
+Pawmot.png
 */
 
 
@@ -131,6 +147,23 @@ import Tatsugiri from "../../../assets/card-assets/season-0/scarlet-violet/Tatsu
 import Wigglet from "../../../assets/card-assets/season-0/scarlet-violet/Wigglet.png";
 import Wigglet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wigglet_2.png";
 import Wugtrio from "../../../assets/card-assets/season-0/scarlet-violet/Wugtrio.png";
+import Armarouge from "../../../assets/card-assets/season-0/scarlet-violet/Armarouge.png";
+import Charcadet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet_2.png";
+import Charcadet from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet.png";
+import Skeledirge from "../../../assets/card-assets/season-0/scarlet-violet/Skeledirge.png";
+import Crocalor from "../../../assets/card-assets/season-0/scarlet-violet/Crocalor.png";
+import Pawmo from "../../../assets/card-assets/season-0/scarlet-violet/Pawmo.png";
+import Pawmi_2 from "../../../assets/card-assets/season-0/scarlet-violet/Pawmi_2.png";
+import Pawmi from "../../../assets/card-assets/season-0/scarlet-violet/Pawmi.png";
+import Toxtricity from "../../../assets/card-assets/season-0/scarlet-violet/Toxtricity.png";
+import Toxel from "../../../assets/card-assets/season-0/scarlet-violet/Toxel.png";
+import Rotom_2 from "../../../assets/card-assets/season-0/scarlet-violet/Rotom_2.png";
+import Miraidon from "../../../assets/card-assets/season-0/scarlet-violet/Miraidon.png";
+import Kilowattrel from "../../../assets/card-assets/season-0/scarlet-violet/Kilowattrel.png";
+import Wattrel_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel_2.png";
+import Wattrel from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel.png";
+import Pawmot from "../../../assets/card-assets/season-0/scarlet-violet/Pawmot.png";
+
 
 
 
@@ -198,8 +231,22 @@ const scarletVioletCards = {
     Wigglet: { name: "Wigglet", image: Wigglet, attribute: "Water", isEx: false, setType: "base" },
     Wigglet_2: { name: "Wigglet_2", image: Wigglet_2, attribute: "Water", isEx: false, setType: "base" },
     Wugtrio: { name: "Wugtrio", image: Wugtrio, attribute: "Water", isEx: false, setType: "base" },
-
-
+    Armarouge: { name: "Armarouge", image: Armarouge, attribute: "Fire", isEx: false, setType: "base" },
+    Charcadet_2: { name: "Charcadet_2", image: Charcadet_2, attribute: "Fire", isEx: false, setType: "base" },
+    Charcadet: { name: "Charcadet", image: Charcadet, attribute: "Fire", isEx: false, setType: "base" },
+    Skeledirge: { name: "Skeledirge", image: Skeledirge, attribute: "Fire", isEx: false, setType: "base" },
+    Crocalor: { name: "Crocalor", image: Crocalor, attribute: "Fire", isEx: false, setType: "base" },
+    Pawmo: { name: "Pawmo", image: Pawmo, attribute: "Electric", isEx: false, setType: "base" },
+    Pawmi_2: { name: "Pawmi_2", image: Pawmi_2, attribute: "Electric", isEx: false, setType: "base" },
+    Pawmi: { name: "Pawmi", image: Pawmi, attribute: "Electric", isEx: false, setType: "base" },
+    Toxtricity: { name: "Toxtricity", image: Toxtricity, attribute: "Electric", isEx: false, setType: "base" },
+    Toxel: { name: "Toxel", image: Toxel, attribute: "Electric", isEx: false, setType: "base" },
+    Rotom_2: { name: "Rotom_2", image: Rotom_2, attribute: "Electric", isEx: false, setType: "base" },
+    Miraidon: { name: "Miraidon", image: Miraidon, attribute: "Electric", isEx: false, setType: "base" },
+    Kilowattrel: { name: "Kilowattrel", image: Kilowattrel, attribute: "Electric", isEx: false, setType: "base" },
+    Wattrel_2: { name: "Wattrel_2", image: Wattrel_2, attribute: "Electric", isEx: false, setType: "base" },
+    Wattrel: { name: "Wattrel", image: Wattrel, attribute: "Electric", isEx: false, setType: "base" },
+    Pawmot: { name: "Pawmot", image: Pawmot, attribute: "Electric", isEx: false, setType: "base" },
 };
 
 export default scarletVioletCards;
