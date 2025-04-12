@@ -50,6 +50,21 @@ Skiddo.png
 Vivillon.png
 Spewpa.png
 Scatterbug.png
+Bruxish.png
+Quaxly.png
+Clauncher.png
+Clawitzer.png
+Cetitan.png
+Cetoddle.png
+Cetoddle_2.png
+Dondozo.png
+Quaquaval.png
+Quaxwell.png
+Tatsugiri.png
+Wigglet.png
+Wigglet_2.png
+Wugtrio.png
+=======
 Armarouge.png
 Charcadet_2.png
 Charcadet.png
@@ -118,6 +133,20 @@ import Skiddo from "../../../assets/card-assets/season-0/scarlet-violet/Skiddo.p
 import Vivillon from "../../../assets/card-assets/season-0/scarlet-violet/Vivillon.png";
 import Spewpa from "../../../assets/card-assets/season-0/scarlet-violet/Spewpa.png";
 import Scatterbug from "../../../assets/card-assets/season-0/scarlet-violet/Scatterbug.png";
+import Bruxish from "../../../assets/card-assets/season-0/scarlet-violet/Bruxish.png";
+import Quaxly from "../../../assets/card-assets/season-0/scarlet-violet/Quaxly.png";
+import Clauncher from "../../../assets/card-assets/season-0/scarlet-violet/Clauncher.png";
+import Clawitzer from "../../../assets/card-assets/season-0/scarlet-violet/Clawitzer.png";
+import Cetitan from "../../../assets/card-assets/season-0/scarlet-violet/Cetitan.png";
+import Cetoddle from "../../../assets/card-assets/season-0/scarlet-violet/Cetoddle.png";
+import Cetoddle_2 from "../../../assets/card-assets/season-0/scarlet-violet/Cetoddle_2.png";
+import Dondozo from "../../../assets/card-assets/season-0/scarlet-violet/Dondozo.png";
+import Quaquaval from "../../../assets/card-assets/season-0/scarlet-violet/Quaquaval.png";
+import Quaxwell from "../../../assets/card-assets/season-0/scarlet-violet/Quaxwell.png";
+import Tatsugiri from "../../../assets/card-assets/season-0/scarlet-violet/Tatsugiri.png";
+import Wigglet from "../../../assets/card-assets/season-0/scarlet-violet/Wigglet.png";
+import Wigglet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wigglet_2.png";
+import Wugtrio from "../../../assets/card-assets/season-0/scarlet-violet/Wugtrio.png";
 import Armarouge from "../../../assets/card-assets/season-0/scarlet-violet/Armarouge.png";
 import Charcadet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet_2.png";
 import Charcadet from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet.png";
@@ -134,6 +163,7 @@ import Kilowattrel from "../../../assets/card-assets/season-0/scarlet-violet/Kil
 import Wattrel_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel_2.png";
 import Wattrel from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel.png";
 import Pawmot from "../../../assets/card-assets/season-0/scarlet-violet/Pawmot.png";
+
 
 
 
@@ -187,6 +217,20 @@ const scarletVioletCards = {
     Vivillon: { name: "Vivillon", image: Vivillon, attribute: "Grass", isEx: false, setType: "base" },
     Spewpa: { name: "Spewpa", image: Spewpa, attribute: "Grass", isEx: false, setType: "base" },
     Scatterbug: { name: "Scatterbug", image: Scatterbug, attribute: "Grass", isEx: false, setType: "base" },
+    Bruxish: { name: "Bruxish", image: Bruxish, attribute: "Water", isEx: false, setType: "base" },
+    Quaxly: { name: "Quaxly", image: Quaxly, attribute: "Water", isEx: false, setType: "base" },
+    Clauncher: { name: "Clauncher", image: Clauncher, attribute: "Water", isEx: false, setType: "base" },
+    Clawitzer: { name: "Clawitzer", image: Clawitzer, attribute: "Water", isEx: false, setType: "base" },
+    Cetitan: { name: "Cetitan", image: Cetitan, attribute: "Ice", isEx: false, setType: "base" },
+    Cetoddle: { name: "Cetoddle", image: Cetoddle, attribute: "Ice", isEx: false, setType: "base" },
+    Cetoddle_2: { name: "Cetoddle_2", image: Cetoddle_2, attribute: "Ice", isEx: false, setType: "base" },
+    Dondozo: { name: "Dondozo", image: Dondozo, attribute: "Water", isEx: false, setType: "base" },
+    Quaquaval: { name: "Quaquaval", image: Quaquaval, attribute: "Water", isEx: false, setType: "base" },
+    Quaxwell: { name: "Quaxwell", image: Quaxwell, attribute: "Water", isEx: false, setType: "base" },
+    Tatsugiri: { name: "Tatsugiri", image: Tatsugiri, attribute: "Water", isEx: false, setType: "base" },
+    Wigglet: { name: "Wigglet", image: Wigglet, attribute: "Water", isEx: false, setType: "base" },
+    Wigglet_2: { name: "Wigglet_2", image: Wigglet_2, attribute: "Water", isEx: false, setType: "base" },
+    Wugtrio: { name: "Wugtrio", image: Wugtrio, attribute: "Water", isEx: false, setType: "base" },
     Armarouge: { name: "Armarouge", image: Armarouge, attribute: "Fire", isEx: false, setType: "base" },
     Charcadet_2: { name: "Charcadet_2", image: Charcadet_2, attribute: "Fire", isEx: false, setType: "base" },
     Charcadet: { name: "Charcadet", image: Charcadet, attribute: "Fire", isEx: false, setType: "base" },
