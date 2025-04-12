@@ -104,7 +104,28 @@ Banette_EX.png
 Shuppet.png
 Gardevoir_EX.png
 Kirlia.png
- */
+Mankey.png
+Medicham.png
+Meditite.png
+Primeape.png
+Riolu.png
+Riolu_2.png
+Lucario.png
+Annihilape.png
+Hawlucha.png
+Krokorok.png
+Sandile.png
+Krookodile.png
+Sandaconda.png
+Silicobra.png
+Stonjourner.png
+Klawf.png
+Great_Tusk_EX.png
+Koraidon.png
+Koraidon_EX.png
+
+
+*/
 
 
 import Alomomola from "../../../assets/card-assets/season-0/scarlet-violet/Alomomola.png";
@@ -209,6 +230,26 @@ import Banette_EX from "../../../assets/card-assets/season-0/scarlet-violet/Bane
 import Shuppet from "../../../assets/card-assets/season-0/scarlet-violet/Shuppet.png";
 import Gardevoir_EX from "../../../assets/card-assets/season-0/scarlet-violet/Gardevoir_EX.png";
 import Kirlia from "../../../assets/card-assets/season-0/scarlet-violet/Kirlia.png";
+import Mankey from "../../../assets/card-assets/season-0/scarlet-violet/Mankey.png";
+import Medicham from "../../../assets/card-assets/season-0/scarlet-violet/Medicham.png";
+import Meditite from "../../../assets/card-assets/season-0/scarlet-violet/Meditite.png";
+import Primeape from "../../../assets/card-assets/season-0/scarlet-violet/Primeape.png";
+import Riolu from "../../../assets/card-assets/season-0/scarlet-violet/Riolu.png";
+import Riolu_2 from "../../../assets/card-assets/season-0/scarlet-violet/Riolu_2.png";
+import Lucario from "../../../assets/card-assets/season-0/scarlet-violet/Lucario.png";
+import Annihilape from "../../../assets/card-assets/season-0/scarlet-violet/Annihilape.png";
+import Hawlucha from "../../../assets/card-assets/season-0/scarlet-violet/Hawlucha.png";
+import Krokorok from "../../../assets/card-assets/season-0/scarlet-violet/Krokorok.png";
+import Sandile from "../../../assets/card-assets/season-0/scarlet-violet/Sandile.png";
+import Krookodile from "../../../assets/card-assets/season-0/scarlet-violet/Krookodile.png";
+import Sandaconda from "../../../assets/card-assets/season-0/scarlet-violet/Sandaconda.png";
+import Silicobra from "../../../assets/card-assets/season-0/scarlet-violet/Silicobra.png";
+import Stonjourner from "../../../assets/card-assets/season-0/scarlet-violet/Stonjourner.png";
+import Klawf from "../../../assets/card-assets/season-0/scarlet-violet/Klawf.png";
+import Great_Tusk_EX from "../../../assets/card-assets/season-0/scarlet-violet/Great_Tusk_EX.png";
+import Koraidon from "../../../assets/card-assets/season-0/scarlet-violet/Koraidon.png";
+import Koraidon_EX from "../../../assets/card-assets/season-0/scarlet-violet/Koraidon_EX.png";
+
 
 
 
@@ -316,6 +357,26 @@ const scarletVioletCards = {
     Shuppet: { name: "Shuppet", image: Shuppet, attribute: "Psychic", isEx: false, setType: "base" },
     Gardevoir_EX: { name: "Gardevoir_EX", image: Gardevoir_EX, attribute: "Psychic", isEx: true, setType: "foil" },
     Kirlia: { name: "Kirlia", image: Kirlia, attribute: "Psychic", isEx: false, setType: "base" },
+    Mankey: { name: "Mankey", image: Mankey, attribute: "Fighting", isEx: false, setType: "base" },
+    Medicham: { name: "Medicham", image: Medicham, attribute: "Fighting", isEx: false, setType: "base" },
+    Meditite: { name: "Meditite", image: Meditite, attribute: "Fighting", isEx: false, setType: "base" },
+    Primeape: { name: "Primeape", image: Primeape, attribute: "Fighting", isEx: false, setType: "base" },
+    Riolu: { name: "Riolu", image: Riolu, attribute: "Fighting", isEx: false, setType: "base" },
+    Riolu_2: { name: "Riolu_2", image: Riolu_2, attribute: "Fighting", isEx: false, setType: "base" },
+    Lucario: { name: "Lucario", image: Lucario, attribute: "Fighting", isEx: false, setType: "base" },
+    Annihilape: { name: "Annihilape", image: Annihilape, attribute: "Fighting", isEx: false, setType: "base" },
+    Hawlucha: { name: "Hawlucha", image: Hawlucha, attribute: "Fighting", isEx: false, setType: "base" },
+    Krokorok: { name: "Krokorok", image: Krokorok, attribute: "Fighting", isEx: false, setType: "base" },
+    Sandile: { name: "Sandile", image: Sandile, attribute: "Fighting", isEx: false, setType: "base" },
+    Krookodile: { name: "Krookodile", image: Krookodile, attribute: "Fighting", isEx: false, setType: "base" },
+    Sandaconda: { name: "Sandaconda", image: Sandaconda, attribute: "Fighting", isEx: false, setType: "base" },
+    Silicobra: { name: "Silicobra", image: Silicobra, attribute: "Fighting", isEx: false, setType: "base" },
+    Stonjourner: { name: "Stonjourner", image: Stonjourner, attribute: "Fighting", isEx: false, setType: "base" },
+    Klawf: { name: "Klawf", image: Klawf, attribute: "Fighting", isEx: false, setType: "base" },
+    Great_Tusk_EX: { name: "Great_Tusk_EX", image: Great_Tusk_EX, attribute: "Fighting", isEx: true, setType: "foil" },
+    Koraidon: { name: "Koraidon", image: Koraidon, attribute: "Fighting", isEx: false, setType: "base" },
+    Koraidon_EX: { name: "Koraidon_EX", image: Koraidon_EX, attribute: "Fighting", isEx: true, setType: "foil" },
+
 };
 
 export default scarletVioletCards;
