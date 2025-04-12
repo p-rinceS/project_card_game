@@ -55,6 +55,17 @@ Charcadet_2.png
 Charcadet.png
 Skeledirge.png
 Crocalor.png
+Pawmo.png
+Pawmi_2.png
+Pawmi.png
+Toxtricity.png
+Toxel.png
+Rotom_2.png
+Miraidon.png
+Kilowattrel.png
+Wattrel_2.png
+Wattrel.png
+Pawmot.png
 */
 
 
@@ -112,6 +123,18 @@ import Charcadet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Cha
 import Charcadet from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet.png";
 import Skeledirge from "../../../assets/card-assets/season-0/scarlet-violet/Skeledirge.png";
 import Crocalor from "../../../assets/card-assets/season-0/scarlet-violet/Crocalor.png";
+import Pawmo from "../../../assets/card-assets/season-0/scarlet-violet/Pawmo.png";
+import Pawmi_2 from "../../../assets/card-assets/season-0/scarlet-violet/Pawmi_2.png";
+import Pawmi from "../../../assets/card-assets/season-0/scarlet-violet/Pawmi.png";
+import Toxtricity from "../../../assets/card-assets/season-0/scarlet-violet/Toxtricity.png";
+import Toxel from "../../../assets/card-assets/season-0/scarlet-violet/Toxel.png";
+import Rotom_2 from "../../../assets/card-assets/season-0/scarlet-violet/Rotom_2.png";
+import Miraidon from "../../../assets/card-assets/season-0/scarlet-violet/Miraidon.png";
+import Kilowattrel from "../../../assets/card-assets/season-0/scarlet-violet/Kilowattrel.png";
+import Wattrel_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel_2.png";
+import Wattrel from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel.png";
+import Pawmot from "../../../assets/card-assets/season-0/scarlet-violet/Pawmot.png";
+
 
 
 const scarletVioletCards = {
@@ -169,6 +192,17 @@ const scarletVioletCards = {
     Charcadet: { name: "Charcadet", image: Charcadet, attribute: "Fire", isEx: false, setType: "base" },
     Skeledirge: { name: "Skeledirge", image: Skeledirge, attribute: "Fire", isEx: false, setType: "base" },
     Crocalor: { name: "Crocalor", image: Crocalor, attribute: "Fire", isEx: false, setType: "base" },
+    Pawmo: { name: "Pawmo", image: Pawmo, attribute: "Electric", isEx: false, setType: "base" },
+    Pawmi_2: { name: "Pawmi_2", image: Pawmi_2, attribute: "Electric", isEx: false, setType: "base" },
+    Pawmi: { name: "Pawmi", image: Pawmi, attribute: "Electric", isEx: false, setType: "base" },
+    Toxtricity: { name: "Toxtricity", image: Toxtricity, attribute: "Electric", isEx: false, setType: "base" },
+    Toxel: { name: "Toxel", image: Toxel, attribute: "Electric", isEx: false, setType: "base" },
+    Rotom_2: { name: "Rotom_2", image: Rotom_2, attribute: "Electric", isEx: false, setType: "base" },
+    Miraidon: { name: "Miraidon", image: Miraidon, attribute: "Electric", isEx: false, setType: "base" },
+    Kilowattrel: { name: "Kilowattrel", image: Kilowattrel, attribute: "Electric", isEx: false, setType: "base" },
+    Wattrel_2: { name: "Wattrel_2", image: Wattrel_2, attribute: "Electric", isEx: false, setType: "base" },
+    Wattrel: { name: "Wattrel", image: Wattrel, attribute: "Electric", isEx: false, setType: "base" },
+    Pawmot: { name: "Pawmot", image: Pawmot, attribute: "Electric", isEx: false, setType: "base" },
 };
 
 export default scarletVioletCards;
