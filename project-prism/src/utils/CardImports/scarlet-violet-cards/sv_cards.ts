@@ -50,6 +50,11 @@ Skiddo.png
 Vivillon.png
 Spewpa.png
 Scatterbug.png
+
+Bruxish.png
+Quaxly.png
+Clauncher.png
+Clawitzer.png
 */
 
 
@@ -102,6 +107,11 @@ import Skiddo from "../../../assets/card-assets/season-0/scarlet-violet/Skiddo.p
 import Vivillon from "../../../assets/card-assets/season-0/scarlet-violet/Vivillon.png";
 import Spewpa from "../../../assets/card-assets/season-0/scarlet-violet/Spewpa.png";
 import Scatterbug from "../../../assets/card-assets/season-0/scarlet-violet/Scatterbug.png";
+import Bruxish from "../../../assets/card-assets/season-0/scarlet-violet/Bruxish.png";
+import Quaxly from "../../../assets/card-assets/season-0/scarlet-violet/Quaxly.png";
+import Clauncher from "../../../assets/card-assets/season-0/scarlet-violet/Clauncher.png";
+import Clawitzer from "../../../assets/card-assets/season-0/scarlet-violet/Clawitzer.png";
+
 const scarletVioletCards = {
     Alomomola: { name: "Alomomola", image: Alomomola, attribute: "Water", isEx: false, setType: "base" },
     Arcanine_EX: { name: "Arcanine_EX", image: Arcanine_EX, attribute: "Fire", isEx: true, setType: "foil" },
@@ -152,6 +162,11 @@ const scarletVioletCards = {
     Vivillon: { name: "Vivillon", image: Vivillon, attribute: "Grass", isEx: false, setType: "base" },
     Spewpa: { name: "Spewpa", image: Spewpa, attribute: "Grass", isEx: false, setType: "base" },
     Scatterbug: { name: "Scatterbug", image: Scatterbug, attribute: "Grass", isEx: false, setType: "base" },
+    Bruxish: { name: "Bruxish", image: Bruxish, attribute: "Water", isEx: false, setType: "base" },
+    Quaxly: { name: "Quaxly", image: Quaxly, attribute: "Water", isEx: false, setType: "base" },
+    Clauncher: { name: "Clauncher", image: Clauncher, attribute: "Water", isEx: false, setType: "base" },
+    Clawitzer: { name: "Clawitzer", image: Clawitzer, attribute: "Water", isEx: false, setType: "base" },
+
 };
 
 export default scarletVioletCards;
