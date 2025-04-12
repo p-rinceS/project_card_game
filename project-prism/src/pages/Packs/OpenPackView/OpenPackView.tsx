@@ -47,32 +47,34 @@ const OpenPackView: FC<OpenPackViewProps> = ({pack, exit}) => {
                     <button className={'open-pack-button'}>Open Pack</button>
                 </div>
                 <div className={'potential-cards-showcase'}>
-                    {packCards
-                        .sort((a, b) => a.attribute.localeCompare(b.attribute)) // Sort cards by attribute
-                        .map((card, index) => {
-                            const selectedCard: CardContents = {
-                                frontImg: card.image,
-                                attribute: card.attribute,
-                                cardSetType: mapSetTypeToEnum(card.setType),// Map setType based on isEx
-                                name: card.name,
-                                isEx: card.isEx,
-                            };
-                            return (
-                                <img
-                                    onClick={() => handleCardClick(selectedCard)} // Pass the transformed card
-                                    width={115}
-                                    key={index}
-                                    src={card.image} // Use the image property
-                                    alt={`Card ${index + 1}`}
-                                    className={'potential-card'}
-                                />
-                            );
-                        })}
+                    <div className={'scrollable-cards-container'}>
+                        {packCards
+                            .sort((a, b) => a.attribute.localeCompare(b.attribute)) // Sort cards by attribute
+                            .map((card, index) => {
+                                const selectedCard: CardContents = {
+                                    frontImg: card.image,
+                                    attribute: card.attribute,
+                                    cardSetType: mapSetTypeToEnum(card.setType), // Map setType based on isEx
+                                    name: card.name,
+                                    isEx: card.isEx,
+                                };
+                                return (
+                                    <img
+                                        onClick={() => handleCardClick(selectedCard)} // Pass the transformed card
+                                        width={115}
+                                        key={index}
+                                        src={card.image} // Use the image property
+                                        alt={`Card ${index + 1}`}
+                                        className={'potential-card'}
+                                    />
+                                );
+                            })}
+                    </div>
                 </div>
             </div>
 
             {isViewerOpen && selectedCard && (
-                <CardViewer  onClose={closeViewer} card={selectedCard}/>
+                <CardViewer onClose={closeViewer} card={selectedCard}/>
             )}
         </div>
     );

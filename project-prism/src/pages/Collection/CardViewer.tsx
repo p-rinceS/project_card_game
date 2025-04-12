@@ -7,7 +7,8 @@ import Back from '../../assets/card-assets/dev-cards/Back.jpg';
 import {CardSetType} from "../../utils/enums.ts";
 import {CardContents} from "../../utils/types.ts";
 import getFoilNormalMap from "../../utils/getFoilNormalMap.ts";
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
+import {EffectComposer, Bloom, DepthOfField} from '@react-three/postprocessing';
+import {UNSAFE_ViewTransitionContext} from "react-router-dom";
 
 interface CardViewerProps {
     card: CardContents
@@ -18,6 +19,9 @@ interface CardModelProps {
     card: CardContents;
 }
 
+
+
+
 const CardModel: React.FC<CardModelProps> = ({ card }) => {
     const groupRef = useRef<THREE.Group>(null);
 
@@ -25,8 +29,7 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
     const frontTexture = useTexture(card.frontImg);
     const backTexture = useTexture(Back);
     const meshRef = useRef<THREE.Mesh>(null); // Ref for the front mesh
-
-
+    const { size } = useThree()
     const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
@@ -37,9 +40,18 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
         return () => clearTimeout(timeout);
     }, []);
 
-    const envMap = useEnvironment({
-        files: "/hdris/kloofendal_28d_misty_puresky_4k.hdr",
-    })
+    const baseEnvironment = useEnvironment({
+        files: "/hdris/mpumalanga_veld_4k.hdr",
+    });
+
+    const holoEnvironment = useEnvironment({
+        files: "/hdris/qwantani_dusk_2_4k.hdr",
+    });
+
+    const foilEnvironment = useEnvironment({
+        files: "/hdris/studio_small_08_4k.hdr",
+    });
+
     scene.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
             const mesh = child as THREE.Mesh;
@@ -47,68 +59,61 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
 
             switch (card.cardSetType) {
                 case CardSetType.foil:
-                    console.log("Foil card detected");
-                    const normalTexture = useTexture(getFoilNormalMap(card.name)); // Replace with the path to your normal map
+                    const normalTexture = useTexture(getFoilNormalMap(card.name));
                     mesh.material = new THREE.MeshStandardMaterial({
                         map: frontTexture,
-                        // normalMap: normalTexture, // Add the normal map
-                        normalScale: new THREE.Vector2(0.15, .15), // Adjust the normal map scale
-                        metalness: .8, // Fully metallic
-                        roughness: 0.4, // Smoother surface for better reflections
-                        envMap: envMap,
-                        envMapIntensity: 1.2,
-                        fog: true,
-                        // emissive: new THREE.Color(0xffffff), // No emissive color
-                        // emissiveIntensity: .5, // No emissive intensity
-                        // emissiveMap: normalTexture
+                        normalMap: normalTexture,
+                        normalScale: new THREE.Vector2(0.15, 0),
+                        metalness: 0.8,
+                        roughness: 0.4,
+                        envMap: foilEnvironment,
+
                     });
-                    meshRef.current = mesh; // Assign the mesh to the ref
+                    meshRef.current = mesh;
                     break;
 
                 case CardSetType.holographic:
-                    console.log("Holo card detected");
                     mesh.material = new THREE.MeshStandardMaterial({
                         map: frontTexture,
-
                         metalness: 0.8,
-                        roughness: 0.3,
-                        envMap: envMap,
-                        envMapIntensity: 1.2,
-                        opacity: 1,
+                        roughness: 0.4,
+                        envMap: holoEnvironment,
+                        envMapIntensity: 0.5,
+                        emissive: new THREE.Color(0x423432),
+                        emissiveIntensity: 1,
                     });
                     break;
 
                 default:
-                    // console.log("Normal card detected");
                     mesh.material = new THREE.MeshStandardMaterial({
                         map: frontTexture,
-                        envMap: envMap,
-                        roughness: 0.9,
-                        envMapIntensity: 0.1,
+                        metalness: 0.8,
+                        roughness: 0.3,
+                        opacity: 1,
+                        envMap: baseEnvironment,
+                        envMapIntensity: 0.5,
                     });
                     break;
             }
 
-            mesh.rotation.set(-Math.PI, Math.PI, Math.PI * 2); // face camera, right-side up
+            mesh.rotation.set(-Math.PI, Math.PI, Math.PI * 2);
         }
     });
 
     const front = scene.clone();
     const back = scene.clone();
 
-
     back.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
             const mesh = child as THREE.Mesh;
-            mesh.material = new THREE.MeshStandardMaterial({ map: backTexture,                 envMap: envMap,
-                // metalness: .5,
-                // roughness: 0.3,
+            mesh.material = new THREE.MeshStandardMaterial({
+                map: backTexture,
+                envMap: baseEnvironment,
             });
 
-            mesh.geometry = mesh.geometry.clone(); // Avoid sharing geometry
-            mesh.rotation.set(-Math.PI , Math.PI, Math.PI); // face camera, right-side up
-            mesh.position.set(0.16, 4.12, .125); // Adjust position for back
-
+            mesh.geometry = mesh.geometry.clone();
+            mesh.rotation.set(-Math.PI, Math.PI, Math.PI);
+            mesh.position.set(0.16, 4.12, 0.125);
         }
     });
 
@@ -119,11 +124,6 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
 
             const cameraDirection = new THREE.Vector3();
             camera.getWorldDirection(cameraDirection);
-
-            const angle = Math.atan2(
-                cameraDirection.x - groupPosition.x,
-                cameraDirection.z - groupPosition.z
-            );
         }
     });
 
@@ -131,12 +131,44 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
         <>
             <EffectComposer>
                 <Bloom
-                    intensity={2} // Dynamically adjust intensity
+                    /*
+                    blendFunction?: BlendFunction;
+                    luminanceThreshold?: number;
+                    luminanceSmoothing?: number;
+                    mipmapBlur?: boolean;
+                    intensity?: number;
+                    radius?: number;
+                    levels?: number;
+                    kernelSize?: KernelSize;
+                    resolutionScale?: number;
+                    width?: number;
+                    height?: number;
+                    resolutionX?: number;
+                    resolutionY?: number;
+                    */
+                    blendFunction={28}
                     luminanceThreshold={0.2}
-                    luminanceSmoothing={3}
+                    luminanceSmoothing={0.9}
+                    mipmapBlur={true}
+                    intensity={1}
+                    radius={1}
+                    levels={8}
+                    kernelSize={4}
+                    resolutionScale={1}
+                    width={size.width}
+                    height={size.height}
+                    resolutionX={size.width}
+                    resolutionY={size.height}
                 />
             </EffectComposer>
             <group ref={groupRef}>
+                {card.cardSetType === CardSetType.base && (
+                    <directionalLight
+                        position={[5, 10, 5]}
+                        intensity={10}
+                        castShadow={true}
+                    />
+                )}
                 {isReady && (
                     <>
                         <primitive
@@ -248,9 +280,7 @@ const CardViewer: React.FC<CardViewerProps> = ({ card, onClose}) => {
             className="card-viewer-overlay"
         >
             <Canvas shadows camera={{position: [0, 2, 2], fov: 75}}>
-                <ambientLight intensity={0.5}/>
-                <pointLight position={[2, 2, 2]} intensity={1}/>
-                <pointLight position={[-2, 2, 2]} intensity={1}/>
+
                 <spotLight position={[0, 5, 0]} angle={0.3} penumbra={1}/>
                 <hemisphereLight intensity={0.5}/>
                 <Suspense fallback={null}>

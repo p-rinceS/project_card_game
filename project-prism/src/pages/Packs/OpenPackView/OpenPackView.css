@@ -40,16 +40,25 @@
 }
 
 .potential-cards-showcase {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr); /* 8 cards per row */
+
     gap: 1rem;
-    width: auto;
+    width: min-content;
     height: auto;
     padding: 1rem;
     margin-left: 3rem;
     background: rgba(28, 30, 34, 0.42);
     overflow-y: auto;
     border-radius: 8px;
+}
+
+.scrollable-cards-container {
+    max-height: calc(3 * 150px); /* Adjust 150px to the height of one row of cards */
+    width: 50rem; /* Ensure the container takes full width */
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); /* Dynamically fill columns */
+    gap: 10px; /* Spacing between cards */
+    padding: 10px;
 }
 
 .potential-cards-showcase::-webkit-scrollbar {
