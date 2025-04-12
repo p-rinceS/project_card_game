@@ -123,6 +123,20 @@ Klawf.png
 Great_Tusk_EX.png
 Koraidon.png
 Koraidon_EX.png
+Bisharp.png
+Bombirdier.png
+Croagunk.png
+Grimer.png
+Kingambit.png
+Mabosstiff.png
+Maschiff.png
+Maschiff_2.png
+Muk.png
+Pawniard.png
+Seviper.png
+Spiritomb.png
+Toxicroak_EX.png
+
 
 
 */
@@ -249,6 +263,20 @@ import Klawf from "../../../assets/card-assets/season-0/scarlet-violet/Klawf.png
 import Great_Tusk_EX from "../../../assets/card-assets/season-0/scarlet-violet/Great_Tusk_EX.png";
 import Koraidon from "../../../assets/card-assets/season-0/scarlet-violet/Koraidon.png";
 import Koraidon_EX from "../../../assets/card-assets/season-0/scarlet-violet/Koraidon_EX.png";
+import Bisharp from "../../../assets/card-assets/season-0/scarlet-violet/Bisharp.png";
+import Bombirdier from "../../../assets/card-assets/season-0/scarlet-violet/Bombirdier.png";
+import Croagunk from "../../../assets/card-assets/season-0/scarlet-violet/Croagunk.png";
+import Grimer from "../../../assets/card-assets/season-0/scarlet-violet/Grimer.png";
+import Kingambit from "../../../assets/card-assets/season-0/scarlet-violet/Kingambit.png";
+import Mabosstiff from "../../../assets/card-assets/season-0/scarlet-violet/Mabosstiff.png";
+import Maschiff from "../../../assets/card-assets/season-0/scarlet-violet/Maschiff.png";
+import Maschiff_2 from "../../../assets/card-assets/season-0/scarlet-violet/Maschiff_2.png";
+import Muk from "../../../assets/card-assets/season-0/scarlet-violet/Muk.png";
+import Pawniard from "../../../assets/card-assets/season-0/scarlet-violet/Pawniard.png";
+import Seviper from "../../../assets/card-assets/season-0/scarlet-violet/Seviper.png";
+import Spiritomb from "../../../assets/card-assets/season-0/scarlet-violet/Spiritomb.png";
+import Toxicroak_EX from "../../../assets/card-assets/season-0/scarlet-violet/Toxicroak_EX.png";
+
 
 
 
@@ -308,9 +336,9 @@ const scarletVioletCards = {
     Quaxly: { name: "Quaxly", image: Quaxly, attribute: "Water", isEx: false, setType: "base" },
     Clauncher: { name: "Clauncher", image: Clauncher, attribute: "Water", isEx: false, setType: "base" },
     Clawitzer: { name: "Clawitzer", image: Clawitzer, attribute: "Water", isEx: false, setType: "base" },
-    Cetitan: { name: "Cetitan", image: Cetitan, attribute: "Ice", isEx: false, setType: "base" },
-    Cetoddle: { name: "Cetoddle", image: Cetoddle, attribute: "Ice", isEx: false, setType: "base" },
-    Cetoddle_2: { name: "Cetoddle_2", image: Cetoddle_2, attribute: "Ice", isEx: false, setType: "base" },
+    Cetitan: { name: "Cetitan", image: Cetitan, attribute: "Water", isEx: false, setType: "base" },
+    Cetoddle: { name: "Cetoddle", image: Cetoddle, attribute: "Water", isEx: false, setType: "base" },
+    Cetoddle_2: { name: "Cetoddle_2", image: Cetoddle_2, attribute: "Water", isEx: false, setType: "base" },
     Dondozo: { name: "Dondozo", image: Dondozo, attribute: "Water", isEx: false, setType: "base" },
     Quaquaval: { name: "Quaquaval", image: Quaquaval, attribute: "Water", isEx: false, setType: "base" },
     Quaxwell: { name: "Quaxwell", image: Quaxwell, attribute: "Water", isEx: false, setType: "base" },
@@ -376,6 +404,20 @@ const scarletVioletCards = {
     Great_Tusk_EX: { name: "Great_Tusk_EX", image: Great_Tusk_EX, attribute: "Fighting", isEx: true, setType: "foil" },
     Koraidon: { name: "Koraidon", image: Koraidon, attribute: "Fighting", isEx: false, setType: "base" },
     Koraidon_EX: { name: "Koraidon_EX", image: Koraidon_EX, attribute: "Fighting", isEx: true, setType: "foil" },
+    Bisharp: { name: "Bisharp", image: Bisharp, attribute: "Fighting", isEx: false, setType: "base" },
+    Bombirdier: { name: "Bombirdier", image: Bombirdier, attribute: "Fighting", isEx: false, setType: "base" },
+    Croagunk: { name: "Croagunk", image: Croagunk, attribute: "Fighting", isEx: false, setType: "base" },
+    Grimer: { name: "Grimer", image: Grimer, attribute: "Fighting", isEx: false, setType: "base" },
+    Kingambit: { name: "Kingambit", image: Kingambit, attribute: "Fighting", isEx: false, setType: "base" },
+    Mabosstiff: { name: "Mabosstiff", image: Mabosstiff, attribute: "Fighting", isEx: false, setType: "base" },
+    Maschiff: { name: "Maschiff", image: Maschiff, attribute: "Fighting", isEx: false, setType: "base" },
+    Maschiff_2: { name: "Maschiff_2", image: Maschiff_2, attribute: "Fighting", isEx: false, setType: "base" },
+    Muk: { name: "Muk", image: Muk, attribute: "Fighting", isEx: false, setType: "base" },
+    Pawniard: { name: "Pawniard", image: Pawniard, attribute: "Fighting", isEx: false, setType: "base" },
+    Seviper: { name: "Seviper", image: Seviper, attribute: "Fighting", isEx: false, setType: "base" },
+    Spiritomb: { name: "Spiritomb", image: Spiritomb, attribute: "Fighting", isEx: false, setType: "base" },
+    Toxicroak_EX: { name: "Toxicroak_EX", image: Toxicroak_EX, attribute: "Fighting", isEx: true, setType: "foil" },
+
 
 };
 
