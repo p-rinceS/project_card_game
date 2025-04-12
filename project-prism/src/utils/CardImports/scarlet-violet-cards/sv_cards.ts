@@ -27,7 +27,6 @@ Slowbro.png
 Slowpoke.png
 Torkoal.png
 Tropius.png
-
 Scovillain.png
 Capsakid_2.png
 Capsakid.png
@@ -77,6 +76,7 @@ Toxtricity.png
 Toxel.png
 Rotom_2.png
 Miraidon.png
+Miraidon_EX.png
 Kilowattrel.png
 Wattrel_2.png
 Wattrel.png
@@ -136,9 +136,32 @@ Pawniard.png
 Seviper.png
 Spiritomb.png
 Toxicroak_EX.png
-
-
-
+Varoom_2.png
+Varoom.png
+Forretress.png
+Cyclizar_2.png
+Cyclizar.png
+Squawkabilly.png
+Maushold.png
+Tandemaus_2.png
+Tandemaus.png
+Oinkologne_EX.png
+Oinkologne.png
+Lechonk_3.png
+Lechonk_2.png
+Lechonk.png
+Indeedee.png
+Greedent.png
+Skwovet.png
+Staraptor.png
+Starvania.png
+Starly.png
+Zangoose_2.png
+Zangoose.png
+Blissey.png
+Chansey.png
+Iron-Treads_EX.png
+Revavroom.png
 */
 
 
@@ -217,6 +240,7 @@ import Toxtricity from "../../../assets/card-assets/season-0/scarlet-violet/Toxt
 import Toxel from "../../../assets/card-assets/season-0/scarlet-violet/Toxel.png";
 import Rotom_2 from "../../../assets/card-assets/season-0/scarlet-violet/Rotom_2.png";
 import Miraidon from "../../../assets/card-assets/season-0/scarlet-violet/Miraidon.png";
+import Miraidon_EX from "../../../assets/card-assets/season-0/scarlet-violet/Miraidon_EX.png";
 import Kilowattrel from "../../../assets/card-assets/season-0/scarlet-violet/Kilowattrel.png";
 import Wattrel_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel_2.png";
 import Wattrel from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel.png";
@@ -276,9 +300,32 @@ import Pawniard from "../../../assets/card-assets/season-0/scarlet-violet/Pawnia
 import Seviper from "../../../assets/card-assets/season-0/scarlet-violet/Seviper.png";
 import Spiritomb from "../../../assets/card-assets/season-0/scarlet-violet/Spiritomb.png";
 import Toxicroak_EX from "../../../assets/card-assets/season-0/scarlet-violet/Toxicroak_EX.png";
-
-
-
+import Varoom_2 from "../../../assets/card-assets/season-0/scarlet-violet/Varoom_2.png";
+import Varoom from "../../../assets/card-assets/season-0/scarlet-violet/Varoom.png";
+import Forretress from "../../../assets/card-assets/season-0/scarlet-violet/Forretress.png";
+import Cyclizar_2 from "../../../assets/card-assets/season-0/scarlet-violet/Cyclizar_2.png";
+import Cyclizar from "../../../assets/card-assets/season-0/scarlet-violet/Cyclizar.png";
+import Squawkabilly from "../../../assets/card-assets/season-0/scarlet-violet/Squawkabilly.png";
+import Maushold from "../../../assets/card-assets/season-0/scarlet-violet/Maushold.png";
+import Tandemaus_2 from "../../../assets/card-assets/season-0/scarlet-violet/Tandemaus_2.png";
+import Tandemaus from "../../../assets/card-assets/season-0/scarlet-violet/Tandemaus.png";
+import Oinkologne_EX from "../../../assets/card-assets/season-0/scarlet-violet/Oinkologne_EX.png";
+import Oinkologne from "../../../assets/card-assets/season-0/scarlet-violet/Oinkologne.png";
+import Lechonk_3 from "../../../assets/card-assets/season-0/scarlet-violet/Lechonk_3.png";
+import Lechonk_2 from "../../../assets/card-assets/season-0/scarlet-violet/Lechonk_2.png";
+import Lechonk from "../../../assets/card-assets/season-0/scarlet-violet/Lechonk.png";
+import Indeedee from "../../../assets/card-assets/season-0/scarlet-violet/Indeedee.png";
+import Greedent from "../../../assets/card-assets/season-0/scarlet-violet/Greedent.png";
+import Skwovet from "../../../assets/card-assets/season-0/scarlet-violet/Skwovet.png";
+import Staraptor from "../../../assets/card-assets/season-0/scarlet-violet/Staraptor.png";
+import Starvania from "../../../assets/card-assets/season-0/scarlet-violet/Starvania.png";
+import Starly from "../../../assets/card-assets/season-0/scarlet-violet/Starly.png";
+import Zangoose_2 from "../../../assets/card-assets/season-0/scarlet-violet/Zangoose_2.png";
+import Zangoose from "../../../assets/card-assets/season-0/scarlet-violet/Zangoose.png";
+import Blissey from "../../../assets/card-assets/season-0/scarlet-violet/Blissey.png";
+import Chansey from "../../../assets/card-assets/season-0/scarlet-violet/Chansey.png";
+import Iron_Treads_EX from "../../../assets/card-assets/season-0/scarlet-violet/Iron-Treads_EX.png";
+import Revavroom from "../../../assets/card-assets/season-0/scarlet-violet/Revavroom.png";
 
 
 
@@ -358,6 +405,7 @@ const scarletVioletCards = {
     Toxel: { name: "Toxel", image: Toxel, attribute: "Electric", isEx: false, setType: "base" },
     Rotom_2: { name: "Rotom_2", image: Rotom_2, attribute: "Electric", isEx: false, setType: "base" },
     Miraidon: { name: "Miraidon", image: Miraidon, attribute: "Electric", isEx: false, setType: "base" },
+    Miraidon_EX: { name: "Miraidon_EX", image: Miraidon_EX, attribute: "Electric", isEx: true, setType: "foil" },
     Kilowattrel: { name: "Kilowattrel", image: Kilowattrel, attribute: "Electric", isEx: false, setType: "base" },
     Wattrel_2: { name: "Wattrel_2", image: Wattrel_2, attribute: "Electric", isEx: false, setType: "base" },
     Wattrel: { name: "Wattrel", image: Wattrel, attribute: "Electric", isEx: false, setType: "base" },
@@ -417,8 +465,32 @@ const scarletVioletCards = {
     Seviper: { name: "Seviper", image: Seviper, attribute: "Dark", isEx: false, setType: "base" },
     Spiritomb: { name: "Spiritomb", image: Spiritomb, attribute: "Dark", isEx: false, setType: "base" },
     Toxicroak_EX: { name: "Toxicroak_EX", image: Toxicroak_EX, attribute: "Dark", isEx: true, setType: "foil" },
-
-
+    Varoom_2: { name: "Varoom_2", image: Varoom_2, attribute: "Steel", isEx: false, setType: "base" },
+    Varoom: { name: "Varoom", image: Varoom, attribute: "Steel", isEx: false, setType: "base" },
+    Forretress: { name: "Forretress", image: Forretress, attribute: "Steel", isEx: false, setType: "base" },
+    Cyclizar_2: { name: "Cyclizar_2", image: Cyclizar_2, attribute: "Normal", isEx: false, setType: "base" },
+    Cyclizar: { name: "Cyclizar", image: Cyclizar, attribute: "Normal", isEx: false, setType: "base" },
+    Squawkabilly: { name: "Squawkabilly", image: Squawkabilly, attribute: "Normal", isEx: false, setType: "base" },
+    Maushold: { name: "Maushold", image: Maushold, attribute: "Normal", isEx: false, setType: "base" },
+    Tandemaus_2: { name: "Tandemaus_2", image: Tandemaus_2, attribute: "Normal", isEx: false, setType: "base" },
+    Tandemaus: { name: "Tandemaus", image: Tandemaus, attribute: "Normal", isEx: false, setType: "base" },
+    Oinkologne_EX: { name: "Oinkologne_EX", image: Oinkologne_EX, attribute: "Normal", isEx: true, setType: "foil" },
+    Oinkologne: { name: "Oinkologne", image: Oinkologne, attribute: "Normal", isEx: false, setType: "base" },
+    Lechonk_3: { name: "Lechonk_3", image: Lechonk_3, attribute: "Normal", isEx: false, setType: "base" },
+    Lechonk_2: { name: "Lechonk_2", image: Lechonk_2, attribute: "Normal", isEx: false, setType: "base" },
+    Lechonk: { name: "Lechonk", image: Lechonk, attribute: "Normal", isEx: false, setType: "base" },
+    Indeedee: { name: "Indeedee", image: Indeedee, attribute: "Normal", isEx: false, setType: "base" },
+    Greedent: { name: "Greedent", image: Greedent, attribute: "Normal", isEx: false, setType: "base" },
+    Skwovet: { name: "Skwovet", image: Skwovet, attribute: "Normal", isEx: false, setType: "base" },
+    Staraptor: { name: "Staraptor", image: Staraptor, attribute: "Normal", isEx: false, setType: "base" },
+    Starvania: { name: "Starvania", image: Starvania, attribute: "Normal", isEx: false, setType: "base" },
+    Starly: { name: "Starly", image: Starly, attribute: "Normal", isEx: false, setType: "base" },
+    Zangoose_2: { name: "Zangoose_2", image: Zangoose_2, attribute: "Normal", isEx: false, setType: "base" },
+    Zangoose: { name: "Zangoose", image: Zangoose, attribute: "Normal", isEx: false, setType: "base" },
+    Blissey: { name: "Blissey", image: Blissey, attribute: "Normal", isEx: false, setType: "base" },
+    Chansey: { name: "Chansey", image: Chansey, attribute: "Normal", isEx: false, setType: "base" },
+    Revavroom: { name: "Revavroom", image: Revavroom, attribute: "Steel", isEx: false, setType: "base" },
+    Iron_Treads_EX: {name: "Iron_Treads_EX", image: Iron_Treads_EX, attribute: "Steel", isEx: true, setType: "foil"}
 };
 
 export default scarletVioletCards;
