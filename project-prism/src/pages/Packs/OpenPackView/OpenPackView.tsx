@@ -5,7 +5,6 @@ import ic_back_arrow from "../../../assets/icons/ic_back_arrow.svg";
 import getCardsFromPack from "../../../utils/getCardsFromPack.ts";
 import mapStringToPackName from "../../../utils/mapStringToPackName.ts";
 import CardViewer from "../../Collection/CardViewer.tsx";
-import {CardSetType} from "../../../utils/enums.ts";
 import mapSetTypeToEnum from "../../../utils/mapSetTypeToEnum.ts";
 import {CardContents} from "../../../utils/types.ts";
 

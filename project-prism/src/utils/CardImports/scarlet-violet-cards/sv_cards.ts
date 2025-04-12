@@ -50,6 +50,11 @@ Skiddo.png
 Vivillon.png
 Spewpa.png
 Scatterbug.png
+Armarouge.png
+Charcadet_2.png
+Charcadet.png
+Skeledirge.png
+Crocalor.png
 */
 
 
@@ -102,6 +107,13 @@ import Skiddo from "../../../assets/card-assets/season-0/scarlet-violet/Skiddo.p
 import Vivillon from "../../../assets/card-assets/season-0/scarlet-violet/Vivillon.png";
 import Spewpa from "../../../assets/card-assets/season-0/scarlet-violet/Spewpa.png";
 import Scatterbug from "../../../assets/card-assets/season-0/scarlet-violet/Scatterbug.png";
+import Armarouge from "../../../assets/card-assets/season-0/scarlet-violet/Armarouge.png";
+import Charcadet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet_2.png";
+import Charcadet from "../../../assets/card-assets/season-0/scarlet-violet/Charcadet.png";
+import Skeledirge from "../../../assets/card-assets/season-0/scarlet-violet/Skeledirge.png";
+import Crocalor from "../../../assets/card-assets/season-0/scarlet-violet/Crocalor.png";
+
+
 const scarletVioletCards = {
     Alomomola: { name: "Alomomola", image: Alomomola, attribute: "Water", isEx: false, setType: "base" },
     Arcanine_EX: { name: "Arcanine_EX", image: Arcanine_EX, attribute: "Fire", isEx: true, setType: "foil" },
@@ -152,6 +164,11 @@ const scarletVioletCards = {
     Vivillon: { name: "Vivillon", image: Vivillon, attribute: "Grass", isEx: false, setType: "base" },
     Spewpa: { name: "Spewpa", image: Spewpa, attribute: "Grass", isEx: false, setType: "base" },
     Scatterbug: { name: "Scatterbug", image: Scatterbug, attribute: "Grass", isEx: false, setType: "base" },
+    Armarouge: { name: "Armarouge", image: Armarouge, attribute: "Fire", isEx: false, setType: "base" },
+    Charcadet_2: { name: "Charcadet_2", image: Charcadet_2, attribute: "Fire", isEx: false, setType: "base" },
+    Charcadet: { name: "Charcadet", image: Charcadet, attribute: "Fire", isEx: false, setType: "base" },
+    Skeledirge: { name: "Skeledirge", image: Skeledirge, attribute: "Fire", isEx: false, setType: "base" },
+    Crocalor: { name: "Crocalor", image: Crocalor, attribute: "Fire", isEx: false, setType: "base" },
 };
 
 export default scarletVioletCards;

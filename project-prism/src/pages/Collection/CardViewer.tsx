@@ -7,8 +7,7 @@ import Back from '../../assets/card-assets/dev-cards/Back.jpg';
 import {CardSetType} from "../../utils/enums.ts";
 import {CardContents} from "../../utils/types.ts";
 import getFoilNormalMap from "../../utils/getFoilNormalMap.ts";
-import {EffectComposer, Bloom, DepthOfField} from '@react-three/postprocessing';
-import {UNSAFE_ViewTransitionContext} from "react-router-dom";
+import {EffectComposer, Bloom} from '@react-three/postprocessing';
 
 interface CardViewerProps {
     card: CardContents
