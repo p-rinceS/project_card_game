@@ -18,16 +18,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: linear-gradient(145deg, #f2f4f8, #e0e4ea);
-  transition: background 0.3s ease;
-  color: #1c1e22;
-}
 
 img{
   user-select: none;
@@ -89,19 +79,3 @@ button:focus-visible {
   box-shadow: 0 12px 40px var(--accent-glow);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f4f4f4;
-    background-color: #121417;
-    --card-bg: #1c1e22;
-    --card-glow: rgba(255, 101, 132, 0.2);
-  }
-
-  a:hover {
-    color: #ff9db0;
-  }
-
-  button {
-    background-color: var(--primary-color);
-  }
-}

@@ -49,11 +49,6 @@ const OpenPackView: FC<OpenPackViewProps> = ({pack, exit}) => {
             <div className={'pack-opening-container'}>
                 <div className={'pack-info-container'}>
                     <img className={'current-pack-image'} src={getPackImageFromPackName(pack)} alt={pack}></img>
-                    <h2 className={'pack-title'}>{pack}</h2>
-                    <div className={'pack-description'}>
-                        <p>Click on a card to inspect it.</p>
-                        <p>{packCards.length}</p>
-                    </div>
                     <button className={'open-pack-button'}>Open Pack</button>
                 </div>
                 <div className={'potential-cards-showcase'}>
@@ -73,6 +68,7 @@ const OpenPackView: FC<OpenPackViewProps> = ({pack, exit}) => {
                                 if (!aIsEnergy && bIsEnergy) return -1;
 
                                 // Check if both cards are fullart Pokémon
+                                // @ts-ignore
                                 const aIsFullArt = a.setType === "fullart";
                                 const bIsFullArt = b.setType === "fullart";
 

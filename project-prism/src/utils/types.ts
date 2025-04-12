@@ -4,6 +4,7 @@ export enum PackNames {
 
 export type Pack = {
     name: string;
+    packLogo: any;
     amount: number;
 };
 

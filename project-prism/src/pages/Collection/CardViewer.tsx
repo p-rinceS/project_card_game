@@ -147,11 +147,11 @@ const CardModel: React.FC<CardModelProps> = ({ card }) => {
                     resolutionY?: number;
                     */
                     blendFunction={28}
-                    luminanceThreshold={0.2}
-                    luminanceSmoothing={0.9}
+                    luminanceThreshold={.5}
+                    luminanceSmoothing={.5}
                     mipmapBlur={true}
-                    intensity={1}
-                    radius={1}
+                    intensity={.5}
+                    radius={.5}
                     levels={8}
                     kernelSize={4}
                     resolutionScale={1}

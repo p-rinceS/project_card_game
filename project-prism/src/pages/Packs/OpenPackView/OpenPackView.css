@@ -26,15 +26,19 @@
     animation: slideOutLeft 0.5s forwards;
 }
 
-.pack-opening-page-container{
+.pack-opening-page-container {
     display: flex;
     position: relative;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: auto;
-    height: auto;
     padding: 2rem;
+    width: 90vw; /* Scale with the viewport width */
+    height: 90vh; /* Scale with the viewport height */
+    max-width: 100%; /* Prevent it from exceeding the screen width */
+    max-height: 100%; /* Prevent it from exceeding the screen height */
+    overflow: auto; /* Add scrollbars if content overflows */
+    box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 .pack-opening-container {
@@ -42,33 +46,67 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: auto;
-    height: auto;
-    padding: 2rem;
+    width: 100%; /* Scale to fill the parent's width */
+    height: 100%; /* Scale to fill the parent's height */
     border: solid 1px #ccc;
     border-radius: 1rem;
     box-shadow: rgba(18, 20, 23, 0.48) 0 0 2px 0;
     background: rgba(90, 94, 108, 0.11);
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    flex-grow: 1; /* Allow it to grow relative to its parent */
 }
 
 :root{
 }
 
-.potential-cards-showcase {
+.pack-description{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333; /* Darker text for better readability */
+    margin-top: 1rem; /* Add some space above the description */
+    text-overflow: ellipsis; /* Handle overflow with ellipsis */
+}
 
+@media (max-width: 600px), (max-height: 600px) {
+    .current-pack-image {
+        display: none; /* Hide the image on small screens or low height */
+    }
+}
+
+.pack-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
     gap: 1rem;
-    width: min-content;
-    height: auto;
+    flex-wrap: wrap;
+    max-width: 90vw; /* Limit width to 90% of the viewport */
+    max-height: 90vh; /* Limit height to 90% of the viewport */
+    padding: 1rem; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.potential-cards-showcase {
+    gap: 1rem;
+    height: 80%;
+    width: 100%;
+    display: flex;
     padding: 1rem;
-    margin-left: 3rem;
+    margin: 2rem;
     background: rgba(28, 30, 34, 0.42);
     overflow-y: auto;
     border-radius: 8px;
+    object-fit: scale-down;
 }
 
 .scrollable-cards-container {
-    max-height: calc(3 * 150px); /* Adjust 150px to the height of one row of cards */
-    width: 50rem; /* Ensure the container takes full width */
+    width: 100%;
     overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); /* Dynamically fill columns */
@@ -85,7 +123,7 @@
     scrollbar-width: none;
 }
 .potential-cards-showcase::-webkit-scrollbar {
-    width: 8px;
+    width: 100%
 }
 
 .potential-card:hover {
@@ -99,24 +137,23 @@
     max-width: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-left: 1rem;
 }
 
 @keyframes moveLeft {
     0% {
-        left: -2rem;
+        left: -1rem;
     }
     50% {
-        left: -4rem;
+        left: -0rem;
     }
     100% {
-        left: -2rem;
+        left: -1rem;
     }
 }
 
 .back-arrow {
-    position: absolute;
-    left: -2rem;
+    position: relative;
+    display: flex;
     cursor: pointer;
     animation: moveLeft 1s infinite ease-in-out;
 }
@@ -128,18 +165,14 @@
 }
 
 .open-pack-button{
-    background: rgba(75, 145, 68, 0.71);
-    color: white;
+    background: rgba(25, 126, 168, 0.71);
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.2rem;
+    border-radius: 2px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .open-pack-button:hover{
-    background: rgba(75, 145, 68, 0.91);
-    transform: scale(1.05);
-    user-select: none;
+    background: rgba(34, 124, 172, 0.91);
+    transform: scale(1.025);
 }

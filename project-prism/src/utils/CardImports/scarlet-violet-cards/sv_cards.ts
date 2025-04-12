@@ -559,7 +559,7 @@ export type EnergyCard = {
     name: string,
     image: any,
     energyType: string,
-    isSpecial: boolean
+    isSpecial?: boolean
 }
 
 const scarletVioletCards: ScarletVioletCards= {

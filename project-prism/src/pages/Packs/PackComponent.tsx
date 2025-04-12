@@ -18,7 +18,7 @@ export const PackComponent: FC<PackComponentProps> = ({ pack, onClick}) => {
                 alt={pack.name}
                 onClick={onClick}
             />
-            <h3>{pack.name}</h3>
+            <img className={'packIcon'} src={pack.packLogo} alt={pack.name}></img>
             <div className="pack-amount-count">x{pack.amount}</div>
         </div>
     );
