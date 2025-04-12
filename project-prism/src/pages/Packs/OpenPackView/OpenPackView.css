@@ -67,7 +67,7 @@
     max-width: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 @keyframes moveLeft {
@@ -93,4 +93,21 @@
 .back-arrow:hover{
     transform: scale(1.1);
     transition: transform 0.2s;
+}
+
+.open-pack-button{
+    background: rgba(75, 145, 68, 0.71);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.open-pack-button:hover{
+    background: rgba(75, 145, 68, 0.91);
+    transform: scale(1.05);
+    user-select: none;
 }

@@ -1,28 +1,31 @@
-
 import './CardViewer.css';
 import React, {useRef, useEffect, Suspense, useState} from 'react';
-import {Canvas, useFrame, useLoader, useThree} from '@react-three/fiber';
+import {Canvas, useFrame, useThree} from '@react-three/fiber';
 import {OrbitControls, useGLTF, useTexture, useEnvironment} from '@react-three/drei';
 import * as THREE from 'three';
 import Back from '../../assets/card-assets/dev-cards/Back.jpg';
 import {CardSetType} from "../../utils/enums.ts";
+import {CardContents} from "../../utils/types.ts";
+import getFoilNormalMap from "../../utils/getFoilNormalMap.ts";
+import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 interface CardViewerProps {
-    cardImg?: string;
+    card: CardContents
     onClose: () => void;
-    cardSetType ?: CardSetType;
 }
 
 interface CardModelProps {
-    frontImg: string;
-    cardSetType: CardSetType;
+    card: CardContents;
 }
 
-const CardModel: React.FC<CardModelProps> = ({ frontImg, cardSetType }) => {
+const CardModel: React.FC<CardModelProps> = ({ card }) => {
     const groupRef = useRef<THREE.Group>(null);
+
     const { scene } = useGLTF('/cardmodel.glb');
-    const frontTexture = useTexture(frontImg);
+    const frontTexture = useTexture(card.frontImg);
     const backTexture = useTexture(Back);
+    const meshRef = useRef<THREE.Mesh>(null); // Ref for the front mesh
+
 
     const [isReady, setIsReady] = useState(false);
 
@@ -35,40 +38,42 @@ const CardModel: React.FC<CardModelProps> = ({ frontImg, cardSetType }) => {
     }, []);
 
     const envMap = useEnvironment({
-        files: "/overcast_soil_puresky_4k.hdr",
+        files: "/hdris/kloofendal_28d_misty_puresky_4k.hdr",
     })
-    // const normalMap = useTexture('/maps/normal.png');
-    // const heightMap = useTexture('/maps/height.png');
-
     scene.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
             const mesh = child as THREE.Mesh;
             mesh.castShadow = true;
 
-            switch (cardSetType) {
+            switch (card.cardSetType) {
                 case CardSetType.foil:
                     console.log("Foil card detected");
+                    const normalTexture = useTexture(getFoilNormalMap(card.name)); // Replace with the path to your normal map
                     mesh.material = new THREE.MeshStandardMaterial({
                         map: frontTexture,
-                        metalness: 1,
-                        roughness: 0.4,
+                        // normalMap: normalTexture, // Add the normal map
+                        normalScale: new THREE.Vector2(0.15, .15), // Adjust the normal map scale
+                        metalness: .8, // Fully metallic
+                        roughness: 0.4, // Smoother surface for better reflections
                         envMap: envMap,
-                        envMapIntensity: 0.6,
+                        envMapIntensity: 1.2,
+                        fog: true,
+                        // emissive: new THREE.Color(0xffffff), // No emissive color
+                        // emissiveIntensity: .5, // No emissive intensity
+                        // emissiveMap: normalTexture
                     });
+                    meshRef.current = mesh; // Assign the mesh to the ref
                     break;
 
                 case CardSetType.holographic:
                     console.log("Holo card detected");
                     mesh.material = new THREE.MeshStandardMaterial({
                         map: frontTexture,
-                        // normalMap: normalMap,
-                        // displacementMap: heightMap,
-                        displacementScale: 0.05,
+
                         metalness: 0.8,
                         roughness: 0.3,
                         envMap: envMap,
                         envMapIntensity: 1.2,
-                        transparent: true,
                         opacity: 1,
                     });
                     break;
@@ -96,8 +101,8 @@ const CardModel: React.FC<CardModelProps> = ({ frontImg, cardSetType }) => {
         if ((child as THREE.Mesh).isMesh) {
             const mesh = child as THREE.Mesh;
             mesh.material = new THREE.MeshStandardMaterial({ map: backTexture,                 envMap: envMap,
-                metalness: .5,
-                roughness: 0.3,
+                // metalness: .5,
+                // roughness: 0.3,
             });
 
             mesh.geometry = mesh.geometry.clone(); // Avoid sharing geometry
@@ -107,33 +112,57 @@ const CardModel: React.FC<CardModelProps> = ({ frontImg, cardSetType }) => {
         }
     });
 
+    useFrame(({ camera }) => {
+        if (groupRef.current) {
+            const groupPosition = new THREE.Vector3();
+            groupRef.current.getWorldPosition(groupPosition);
+
+            const cameraDirection = new THREE.Vector3();
+            camera.getWorldDirection(cameraDirection);
+
+            const angle = Math.atan2(
+                cameraDirection.x - groupPosition.x,
+                cameraDirection.z - groupPosition.z
+            );
+        }
+    });
 
     return (
-        <group ref={groupRef}>
-            {isReady && (
-                <>
-                    <primitive
-                        object={front}
-                        position={[0, 0, -2]}
-                        rotation={[-Math.PI / 2, 0, Math.PI]}
-                    />
-                    <primitive
-                        object={back}
-                        position={[-0.3, 0, -3.65]}
-                        rotation={[-Math.PI / 2, 0, Math.PI]}
-                    />
-                </>
-            )}
-        </group>
+        <>
+            <EffectComposer>
+                <Bloom
+                    intensity={2} // Dynamically adjust intensity
+                    luminanceThreshold={0.2}
+                    luminanceSmoothing={3}
+                />
+            </EffectComposer>
+            <group ref={groupRef}>
+                {isReady && (
+                    <>
+                        <primitive
+                            object={front}
+                            position={[0, 0, -2]}
+                            rotation={[-Math.PI / 2, 0, Math.PI]}
+                        />
+                        <primitive
+                            object={back}
+                            position={[-0.3, 0, -3.65]}
+                            rotation={[-Math.PI / 2, 0, Math.PI]}
+                        />
+                    </>
+                )}
+            </group>
+        </>
     );
 };
 
 const CameraControls = () => {
     const {camera} = useThree();
+    // @ts-ignore
     const controls = useRef<OrbitControls | null>(null); // Specify the type for OrbitControls
     const timeRef = useRef(0);
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         if (controls.current) {
             controls.current.update();
 
@@ -159,7 +188,7 @@ const CameraControls = () => {
 
     return <OrbitControls ref={controls} makeDefault enableZoom={false} enablePan={false} />;};
 
-const CardViewer: React.FC<CardViewerProps> = ({ cardImg = '', onClose, cardSetType }) => {
+const CardViewer: React.FC<CardViewerProps> = ({ card, onClose}) => {
     const isDragging = useRef(false);
 
     useEffect(() => {
@@ -225,7 +254,7 @@ const CardViewer: React.FC<CardViewerProps> = ({ cardImg = '', onClose, cardSetT
                 <spotLight position={[0, 5, 0]} angle={0.3} penumbra={1}/>
                 <hemisphereLight intensity={0.5}/>
                 <Suspense fallback={null}>
-                    <CardModel frontImg={cardImg} cardSetType={cardSetType} />
+                    <CardModel card={card} />
                 </Suspense>
                 <CameraControls/>
             </Canvas>

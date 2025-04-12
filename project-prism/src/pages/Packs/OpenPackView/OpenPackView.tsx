@@ -6,23 +6,21 @@ import getCardsFromPack from "../../../utils/getCardsFromPack.ts";
 import mapStringToPackName from "../../../utils/mapStringToPackName.ts";
 import CardViewer from "../../Collection/CardViewer.tsx";
 import {CardSetType} from "../../../utils/enums.ts";
+import mapSetTypeToEnum from "../../../utils/mapSetTypeToEnum.ts";
+import {CardContents} from "../../../utils/types.ts";
 
 type OpenPackViewProps = {
     pack: string | undefined
     exit: () => void
 }
 
-type SelectedPreviewCard = {
-    image: string;
-    attribute: string;
-    setType?: CardSetType
-}
+
 
 const OpenPackView: FC<OpenPackViewProps> = ({pack, exit}) => {
     const [isViewerOpen, setIsViewerOpen] = useState(false);
-    const [selectedCard, setSelectedCard] = useState<SelectedPreviewCard | undefined>(undefined);
+    const [selectedCard, setSelectedCard] = useState<CardContents | undefined>(undefined);
 
-    const handleCardClick = (card: SelectedPreviewCard) => {
+    const handleCardClick = (card: CardContents) => {
         setSelectedCard(card);
         setIsViewerOpen(true);
     };
@@ -39,15 +37,25 @@ const OpenPackView: FC<OpenPackViewProps> = ({pack, exit}) => {
                 <img src={ic_back_arrow} alt={"back"} width={50} height={50}></img>
             </div>
             <div className={'pack-opening-container'}>
-                <img className={'current-pack-image'} src={getPackImageFromPackName(pack)} alt={pack}></img>
+                <div className={'pack-info-container'}>
+                    <img className={'current-pack-image'} src={getPackImageFromPackName(pack)} alt={pack}></img>
+                    <h2 className={'pack-title'}>{pack}</h2>
+                    <div className={'pack-description'}>
+                        <p>Click on a card to inspect it.</p>
+                        <p>{packCards.length}</p>
+                    </div>
+                    <button className={'open-pack-button'}>Open Pack</button>
+                </div>
                 <div className={'potential-cards-showcase'}>
                     {packCards
                         .sort((a, b) => a.attribute.localeCompare(b.attribute)) // Sort cards by attribute
                         .map((card, index) => {
-                            const selectedCard: SelectedPreviewCard = {
-                                image: card.image,
+                            const selectedCard: CardContents = {
+                                frontImg: card.image,
                                 attribute: card.attribute,
-                                setType: card.isEx ? CardSetType.foil : CardSetType.base, // Map setType based on isEx
+                                cardSetType: mapSetTypeToEnum(card.setType),// Map setType based on isEx
+                                name: card.name,
+                                isEx: card.isEx,
                             };
                             return (
                                 <img
@@ -64,7 +72,7 @@ const OpenPackView: FC<OpenPackViewProps> = ({pack, exit}) => {
             </div>
 
             {isViewerOpen && selectedCard && (
-                <CardViewer cardImg={selectedCard.image} onClose={closeViewer} cardSetType={selectedCard.setType}/>
+                <CardViewer  onClose={closeViewer} card={selectedCard}/>
             )}
         </div>
     );
