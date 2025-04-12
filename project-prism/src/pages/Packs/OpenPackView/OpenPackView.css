@@ -1,0 +1,96 @@
+
+.open-pack-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Fit the viewport width */
+    height: 100vh; /* Fit the viewport height */
+    padding: 2rem;
+    overflow: hidden; /* Prevent overflow */
+    background: #f0f0f0; /* Optional: Set a background color */
+}
+
+.pack-opening-page-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 2rem;
+}
+
+.pack-opening-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    border: solid 1px #ccc;
+    border-radius: 1rem;
+    box-shadow: rgba(18, 20, 23, 0.48) 0 0 2px 0;
+    background: rgba(90, 94, 108, 0.11);
+}
+
+:root{
+}
+
+.potential-cards-showcase {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 cards per row */
+    gap: 1rem;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    margin-left: 3rem;
+    background: rgba(28, 30, 34, 0.42);
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.potential-cards-showcase::-webkit-scrollbar {
+    width: 8px;
+}
+
+.potential-card:hover {
+    transform: scale(1.1); /* Enlarge the card */
+    transition: transform 0.2s ease-in-out;
+    z-index: 1; /* Ensure the hovered card appears above others */
+    cursor:pointer;
+}
+
+.current-pack-image {
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 2rem;
+}
+
+@keyframes moveLeft {
+    0% {
+        left: -2rem;
+    }
+    50% {
+        left: -4rem;
+    }
+    100% {
+        left: -2rem;
+    }
+}
+
+.back-arrow {
+    position: absolute;
+    left: -2rem;
+    cursor: pointer;
+    animation: moveLeft 1s infinite ease-in-out;
+}
+
+
+.back-arrow:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}

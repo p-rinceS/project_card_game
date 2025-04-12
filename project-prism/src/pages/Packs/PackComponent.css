@@ -1,0 +1,28 @@
+
+
+.pack-component {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pack-amount-count {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    top: -1rem;
+    right: -.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.pack-component:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
