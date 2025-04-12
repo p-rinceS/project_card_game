@@ -55,6 +55,16 @@ Bruxish.png
 Quaxly.png
 Clauncher.png
 Clawitzer.png
+Cetitan.png
+Cetoddle.png
+Cetoddle_2.png
+Dondozo.png
+Quaquaval.png
+Quaxwell.png
+Tatsugiri.png
+Wigglet.png
+Wigglet_2.png
+Wugtrio.png
 */
 
 
@@ -111,6 +121,18 @@ import Bruxish from "../../../assets/card-assets/season-0/scarlet-violet/Bruxish
 import Quaxly from "../../../assets/card-assets/season-0/scarlet-violet/Quaxly.png";
 import Clauncher from "../../../assets/card-assets/season-0/scarlet-violet/Clauncher.png";
 import Clawitzer from "../../../assets/card-assets/season-0/scarlet-violet/Clawitzer.png";
+import Cetitan from "../../../assets/card-assets/season-0/scarlet-violet/Cetitan.png";
+import Cetoddle from "../../../assets/card-assets/season-0/scarlet-violet/Cetoddle.png";
+import Cetoddle_2 from "../../../assets/card-assets/season-0/scarlet-violet/Cetoddle_2.png";
+import Dondozo from "../../../assets/card-assets/season-0/scarlet-violet/Dondozo.png";
+import Quaquaval from "../../../assets/card-assets/season-0/scarlet-violet/Quaquaval.png";
+import Quaxwell from "../../../assets/card-assets/season-0/scarlet-violet/Quaxwell.png";
+import Tatsugiri from "../../../assets/card-assets/season-0/scarlet-violet/Tatsugiri.png";
+import Wigglet from "../../../assets/card-assets/season-0/scarlet-violet/Wigglet.png";
+import Wigglet_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wigglet_2.png";
+import Wugtrio from "../../../assets/card-assets/season-0/scarlet-violet/Wugtrio.png";
+
+
 
 const scarletVioletCards = {
     Alomomola: { name: "Alomomola", image: Alomomola, attribute: "Water", isEx: false, setType: "base" },
@@ -166,6 +188,17 @@ const scarletVioletCards = {
     Quaxly: { name: "Quaxly", image: Quaxly, attribute: "Water", isEx: false, setType: "base" },
     Clauncher: { name: "Clauncher", image: Clauncher, attribute: "Water", isEx: false, setType: "base" },
     Clawitzer: { name: "Clawitzer", image: Clawitzer, attribute: "Water", isEx: false, setType: "base" },
+    Cetitan: { name: "Cetitan", image: Cetitan, attribute: "Ice", isEx: false, setType: "base" },
+    Cetoddle: { name: "Cetoddle", image: Cetoddle, attribute: "Ice", isEx: false, setType: "base" },
+    Cetoddle_2: { name: "Cetoddle_2", image: Cetoddle_2, attribute: "Ice", isEx: false, setType: "base" },
+    Dondozo: { name: "Dondozo", image: Dondozo, attribute: "Water", isEx: false, setType: "base" },
+    Quaquaval: { name: "Quaquaval", image: Quaquaval, attribute: "Water", isEx: false, setType: "base" },
+    Quaxwell: { name: "Quaxwell", image: Quaxwell, attribute: "Water", isEx: false, setType: "base" },
+    Tatsugiri: { name: "Tatsugiri", image: Tatsugiri, attribute: "Water", isEx: false, setType: "base" },
+    Wigglet: { name: "Wigglet", image: Wigglet, attribute: "Water", isEx: false, setType: "base" },
+    Wigglet_2: { name: "Wigglet_2", image: Wigglet_2, attribute: "Water", isEx: false, setType: "base" },
+    Wugtrio: { name: "Wugtrio", image: Wugtrio, attribute: "Water", isEx: false, setType: "base" },
+
 
 };
 
