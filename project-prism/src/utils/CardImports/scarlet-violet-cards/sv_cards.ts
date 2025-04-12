@@ -81,7 +81,30 @@ Kilowattrel.png
 Wattrel_2.png
 Wattrel.png
 Pawmot.png
-*/
+Hypno.png
+Drowzee.png
+Greavard_2.png
+Greavard.png
+Espathra.png
+Flittle_3.png
+Flittle_2.png
+Flittle.png
+Dachsbun.png
+Fidough_2.png
+Fidough.png
+Klefki.png
+Dedenne_2.png
+Dedenne.png
+Florges.png
+Floette.png
+Flabebe.png
+Drifblim.png
+Drifloon.png
+Banette_EX.png
+Shuppet.png
+Gardevoir_EX.png
+Kirlia.png
+ */
 
 
 import Alomomola from "../../../assets/card-assets/season-0/scarlet-violet/Alomomola.png";
@@ -163,6 +186,29 @@ import Kilowattrel from "../../../assets/card-assets/season-0/scarlet-violet/Kil
 import Wattrel_2 from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel_2.png";
 import Wattrel from "../../../assets/card-assets/season-0/scarlet-violet/Wattrel.png";
 import Pawmot from "../../../assets/card-assets/season-0/scarlet-violet/Pawmot.png";
+import Hypno from "../../../assets/card-assets/season-0/scarlet-violet/Hypno.png";
+import Drowzee from "../../../assets/card-assets/season-0/scarlet-violet/Drowzee.png";
+import Greavard_2 from "../../../assets/card-assets/season-0/scarlet-violet/Greavard_2.png";
+import Greavard from "../../../assets/card-assets/season-0/scarlet-violet/Greavard.png";
+import Espathra from "../../../assets/card-assets/season-0/scarlet-violet/Espathra.png";
+import Flittle_3 from "../../../assets/card-assets/season-0/scarlet-violet/Flittle_3.png";
+import Flittle_2 from "../../../assets/card-assets/season-0/scarlet-violet/Flittle_2.png";
+import Flittle from "../../../assets/card-assets/season-0/scarlet-violet/Flittle.png";
+import Dachsbun from "../../../assets/card-assets/season-0/scarlet-violet/Dachsbun.png";
+import Fidough_2 from "../../../assets/card-assets/season-0/scarlet-violet/Fidough_2.png";
+import Fidough from "../../../assets/card-assets/season-0/scarlet-violet/Fidough.png";
+import Klefki from "../../../assets/card-assets/season-0/scarlet-violet/Klefki.png";
+import Dedenne_2 from "../../../assets/card-assets/season-0/scarlet-violet/Dedenne_2.png";
+import Dedenne from "../../../assets/card-assets/season-0/scarlet-violet/Dedenne.png";
+import Florges from "../../../assets/card-assets/season-0/scarlet-violet/Florges.png";
+import Floette from "../../../assets/card-assets/season-0/scarlet-violet/Floette.png";
+import Flabebe from "../../../assets/card-assets/season-0/scarlet-violet/Flabebe.png";
+import Drifblim from "../../../assets/card-assets/season-0/scarlet-violet/Drifblim.png";
+import Drifloon from "../../../assets/card-assets/season-0/scarlet-violet/Drifloon.png";
+import Banette_EX from "../../../assets/card-assets/season-0/scarlet-violet/Banette_EX.png";
+import Shuppet from "../../../assets/card-assets/season-0/scarlet-violet/Shuppet.png";
+import Gardevoir_EX from "../../../assets/card-assets/season-0/scarlet-violet/Gardevoir_EX.png";
+import Kirlia from "../../../assets/card-assets/season-0/scarlet-violet/Kirlia.png";
 
 
 
@@ -247,6 +293,29 @@ const scarletVioletCards = {
     Wattrel_2: { name: "Wattrel_2", image: Wattrel_2, attribute: "Electric", isEx: false, setType: "base" },
     Wattrel: { name: "Wattrel", image: Wattrel, attribute: "Electric", isEx: false, setType: "base" },
     Pawmot: { name: "Pawmot", image: Pawmot, attribute: "Electric", isEx: false, setType: "base" },
+    Hypno: { name: "Hypno", image: Hypno, attribute: "Psychic", isEx: false, setType: "base" },
+    Drowzee: { name: "Drowzee", image: Drowzee, attribute: "Psychic", isEx: false, setType: "base" },
+    Greavard_2: { name: "Greavard_2", image: Greavard_2, attribute: "Psychic", isEx: false, setType: "base" },
+    Greavard: { name: "Greavard", image: Greavard, attribute: "Psychic", isEx: false, setType: "base" },
+    Espathra: { name: "Espathra", image: Espathra, attribute: "Psychic", isEx: false, setType: "base" },
+    Flittle_3: { name: "Flittle_3", image: Flittle_3, attribute: "Psychic", isEx: false, setType: "base" },
+    Flittle_2: { name: "Flittle_2", image: Flittle_2, attribute: "Psychic", isEx: false, setType: "base" },
+    Flittle: { name: "Flittle", image: Flittle, attribute: "Psychic", isEx: false, setType: "base" },
+    Dachsbun: { name: "Dachsbun", image: Dachsbun, attribute: "Psychic", isEx: false, setType: "base" },
+    Fidough_2: { name: "Fidough_2", image: Fidough_2, attribute: "Psychic", isEx: false, setType: "base" },
+    Fidough: { name: "Fidough", image: Fidough, attribute: "Psychic", isEx: false, setType: "base" },
+    Klefki: { name: "Klefki", image: Klefki, attribute: "Psychic", isEx: false, setType: "base" },
+    Dedenne_2: { name: "Dedenne_2", image: Dedenne_2, attribute: "Psychic", isEx: false, setType: "base" },
+    Dedenne: { name: "Dedenne", image: Dedenne, attribute: "Psychic", isEx: false, setType: "base" },
+    Florges: { name: "Florges", image: Florges, attribute: "Psychic", isEx: false, setType: "base" },
+    Floette: { name: "Floette", image: Floette, attribute: "Psychic", isEx: false, setType: "base" },
+    Flabebe: { name: "Flabebe", image: Flabebe, attribute: "Psychic", isEx: false, setType: "base" },
+    Drifblim: { name: "Drifblim", image: Drifblim, attribute: "Psychic", isEx: false, setType: "base" },
+    Drifloon: { name: "Drifloon", image: Drifloon, attribute: "Psychic", isEx: false, setType: "base" },
+    Banette_EX: { name: "Banette_EX", image: Banette_EX, attribute: "Psychic", isEx: true, setType: "foil" },
+    Shuppet: { name: "Shuppet", image: Shuppet, attribute: "Psychic", isEx: false, setType: "base" },
+    Gardevoir_EX: { name: "Gardevoir_EX", image: Gardevoir_EX, attribute: "Psychic", isEx: true, setType: "foil" },
+    Kirlia: { name: "Kirlia", image: Kirlia, attribute: "Psychic", isEx: false, setType: "base" },
 };
 
 export default scarletVioletCards;
