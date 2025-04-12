@@ -1,72 +1,70 @@
+import './Items.css';
 import { FC, useState } from "react";
-import {PackComponent} from "./PackComponent.tsx";
+import { PackComponent } from "./PackComponent.tsx";
 import OpenPackView from "./OpenPackView/OpenPackView.tsx";
-
-
-
-type PacksProps = {
-    title: string;
-}
-
-// Description of Items
-// Items is a component that displays a list of packs that the user will be able to open
-// Will contain a list of packs which contain random cards that the user can then add to their collection
-// Items will cost $1.50 to open initially
-// Cards can be put on a market place
-// More packs will be added in the future
-// Currently you can click on a pack to view the possible cards that can be obtained from it
-
-
-
+import SWSH1Logo from "../../assets/pack-assets/season-0/SWSH1.png";
 export enum PackNames {
     ScarletAndViolet = "Scarlet and Violet",
 }
 
 type itemsViews = "items" | "open";
 
-
-const Items: FC<PacksProps> = () => {
-
+const Items: FC = () => {
     const [view, setView] = useState<itemsViews>("items");
     const [selectedPack, setSelectedPack] = useState<PackNames>(PackNames.ScarletAndViolet);
+    const [animationClass, setAnimationClass] = useState("fade-in");
 
     const mockInventory = [
         {
             name: PackNames.ScarletAndViolet,
             amount: 2,
+            packLogo: SWSH1Logo, // Replace with actual logo path
         },
     ];
 
+    const handleViewChange = (newView: itemsViews) => {
+        setAnimationClass("fade-out");
+        setTimeout(() => {
+            setView(newView);
+            setAnimationClass("fade-in");
+        }, 500); // Match the animation duration
+    };
 
+    return (
+        <div className={animationClass}>
+            {view === "items" && (
+                <div>
+                    <h2>
+                        Packs (x
+                        {mockInventory
+                            .map((item) => item.amount)
+                            .reduce((a, b) => a + b, 0)}
+                        )
+                    </h2>
+                    <section className={'pack-list-container'}>
 
-    return(<>{
-    view === "items" &&
-            <div>
-                <section>
-                    <h2>Packs (x{mockInventory.map(
-                        (item) => item.amount).reduce((a, b) => a + b, 0
-                    )})</h2>
-                    {/*     map through mockInventory to display card packs*/}
-                    <div className="card-container">
-                        {mockInventory.map((item) => (
-                            <PackComponent pack={item} onClick={
-                                () => {
-                                    setView("open");
-                                    setSelectedPack(item.name);
-                                }
-                            }/>
-                        ))}
-                    </div>
-                </section>
-            </div>
-            }
-            {
-                view === "open" &&
-                <OpenPackView pack={selectedPack} exit={() => setView("items")}></OpenPackView>
-            }
-        </>
+                        <div className="card-container">
+                            {mockInventory.map((item) => (
+                                <PackComponent
+                                    pack={item}
+                                    onClick={() => {
+                                        handleViewChange("open");
+                                        setSelectedPack(item.name);
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            )}
+            {view === "open" && (
+                <OpenPackView
+                    pack={selectedPack}
+                    exit={() => handleViewChange("items")}
+                />
+            )}
+        </div>
     );
-}
-
+};
 
 export default Items;
