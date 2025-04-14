@@ -8,7 +8,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home title={"Project Prism"} description={"don't sue me, im not ready"}/>} />
-                <Route path="/packs" element={<Items title={"Packs"} />} />
+                <Route path="/packs" element={<Items />} />
             </Routes>
         </BrowserRouter>
   )
